@@ -15,7 +15,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
+//Updates from citysearchapi branch
 public class MainActivity extends AppCompatActivity {
 
     String CITY = "omaha,us";
