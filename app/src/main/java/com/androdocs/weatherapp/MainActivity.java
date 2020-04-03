@@ -1,8 +1,10 @@
 package com.androdocs.weatherapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     String CITY = "omaha,us";
     String API = "f598f803c981ba647994faad4a323a5f";
+    private Button UserInput;
 
     TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
             sunsetTxt, windTxt, pressureTxt, humidityTxt;
@@ -42,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
         humidityTxt = findViewById(R.id.humidity);
 
         new weatherTask().execute();
+        UserInput = findViewById(R.id.UserInput);
+        UserInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UserInputPage.class);
+                startActivity(intent);
+            }
+        });
     }
 
     class weatherTask extends AsyncTask<String, Void, String> {

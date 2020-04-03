@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Weather App</string>
+    <string name="app_name">Edit Locations</string>
+    <string name="UserInput">Edit Location</string>
+    <string name="enter_location">Enter the name of a city</string>
+    <string name="go_button">GO!</string>
+    <string name="back_button">Back</string>
+
 </resources>
